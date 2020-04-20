@@ -1,0 +1,10 @@
+host:
+  templates:
+    - name: etc/hosts
+      mode: 0o644
+    - name: etc/hostname
+      mode: 0o644
+api_key:
+  templates:
+    - name: opt/remote-ventilator-monitor-pi/api-key
+      mode: 0o600

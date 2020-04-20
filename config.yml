@@ -1,0 +1,4 @@
+source_image: images/openvent-pi-2-shrink.img
+org:
+    name: MGH
+    cluster: 1st Floor
