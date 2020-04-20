@@ -9,7 +9,7 @@ from yaml import load, Loader
 from argparse import Namespace
 from mounter import Mounter
 
-# The 3 MVP requirements for this image provisioning tool are:
+# The MVP requirements for this image provisioning tool are:
 # 1. Automatically generated hostname ✔
 # 2. Automatically generated api-key ✔
 # 3. Automatically generated, signed key (server.key) and cert (server.crt)
