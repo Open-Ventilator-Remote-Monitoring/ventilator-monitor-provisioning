@@ -1,0 +1,14 @@
+[req]
+default_bits=2048
+prompt=no
+default_md=sha256
+distinguished_name=dn
+
+[dn]
+C={{config.cert.dn.c}}
+ST={{config.cert.dn.st}}
+L={{config.cert.dn.l}}
+O={{config.cert.dn.o}}
+OU={{config.cert.dn.ou}}
+emailAddress={{config.cert.dn.email_address}}
+CN={{host.hostname}}.local

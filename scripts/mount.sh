@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# This script should be installed into /opt/provisioning/bin, and should be
-# owned by root, with permissions 700.
-
 if [ "$#" -ne 2 ]; then
     echo "Usage"
     echo $0 IMAGE_FILE MOUNT_POINT

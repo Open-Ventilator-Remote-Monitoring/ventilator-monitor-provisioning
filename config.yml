@@ -1,4 +1,21 @@
-source_image: images/openvent-pi-2-shrink.img
+source_image: images/openvent-pi-4-shrink.img
 org:
     name: MGH
-    cluster: 1st Floor
+    cluster: Partners Innovation Lab
+cert:
+    cert_folder: certs/
+    root_ca_key: certs/rootCA.key
+    root_ca_pem: certs/rootCA.pem
+sound_alarm:
+    enabled: true
+    pin: 4
+data_collector:
+    enabled: false
+cert:
+    dn:
+        c: US
+        st: Utah
+        l: Salt Lake City
+        o: Open Ventilator Remote Montitoring Project
+        ou: Engineering
+        email_address: sblake@gmail.com

@@ -1,10 +1,21 @@
 host:
   templates:
-    - name: etc/hosts
+    - path: etc/hosts
       mode: 0o644
-    - name: etc/hostname
+    - path: etc/hostname
       mode: 0o644
-api_key:
+config:
   templates:
-    - name: opt/remote-ventilator-monitor-pi/api-key
-      mode: 0o600
+    - path: opt/remote-ventilator-monitor-pi/application-production.yml
+certs:
+  ssl_cert:
+    folder: ./certs
+    ca_cert_key_file: rootCA.key
+    ca_cert_pem_file: rootCA.pem
+    v3_ext_template: cert/v3.ext
+    server_csr_cnf_template: cert/server.csr.cnf
+    dest: opt/
+zerotier:
+  rm:
+    - path: /var/lib/zerotier-one/identity.public
+    - path: /var/lib/zerotier-one/identity.secret

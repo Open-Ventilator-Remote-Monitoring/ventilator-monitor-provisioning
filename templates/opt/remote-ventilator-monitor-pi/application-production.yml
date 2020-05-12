@@ -1,0 +1,19 @@
+ventilator:
+    name: {{host.hostname}}
+    authorization: OpenVentApiKeyV1 {{api_key}}
+    {% if config.sound_alarm.enabled %}
+    alarm:
+      pin: {{config.sound_alarm.pin}}
+    {% endif %}
+    {% if config.data_collector.enabled %}
+    connection:
+        type: {{config.data_collector.type}}
+        link: {{config.data_collector.link}}
+        baud: {{config.data_collector.baud}}
+        timeout: {{config.data_collector.timeout}}
+    {% endif %}
+    device:
+      id: {{unique_id}}
+      roles:
+        ventilatorAlarmSoundMonitor: {{config.sound_alarm.enabled}}
+        ventilatorDataMonitor: {{config.data_collector.enabled}}
